@@ -6,12 +6,6 @@
 	<title>@ViewBag.Title - My ASP.NET Application</title>
 	@Styles.Render("~/Content/css")
 	@Scripts.Render("~/bundles/modernizr")
-	<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-	<script src="~/Scripts/modernizr-2.6.2.js"></script>
-	<meta name="viewport" content="width=device-width" />
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -23,27 +17,22 @@
 					<span class="icon-bar"></span>
 				</button>@Html.ActionLink("Album Management", "Index", "Home", null, new { @class= "brand"})
 			</div>
-			<div class="navbar-collapse collapse">
+			<div class="nav-collapse collapse">
 				<ul class="nav">
 					<li>@Html.ActionLink("Home", "Index", "Home")</li>
 					<li>@Html.ActionLink("About", "About", "Home")</li>
+					<li>@Html.ActionLink("Albums", "Index", "Album")</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div id="body">
-		@*@RenderSection("featured", required: false)*@
-		<section class="content-wrapper main-content clear-fix">
-			@RenderBody()
-		</section>
+	<div class="container">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - My ASP.NET Web Page <span style="text-align:end">Information from Wikipedia</span></p>
+		</footer>
 	</div>
-	<footer>
-		<div class="content-wrapper">
-			<div class="float-left">
-				<p>&copy; @DateTime.Now.Year - My ASP.NET Web Page <span style="text-align:end">Information from Wikipedia</span></p>
-			</div>
-		</div>
-	</footer>
 	@Scripts.Render("~/bundles/jquery")
 	@Scripts.Render("~/bundles/bootstrap")
 	@RenderSection("scripts", required: false)
