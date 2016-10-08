@@ -11,6 +11,7 @@ namespace MVC_Assignment4.Controllers
 		public ActionResult Index()
 		{
 			return View();
+			
 		}
 
 		public ActionResult About()
