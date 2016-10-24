@@ -18,5 +18,7 @@ namespace MVC_Assignment4.Models
 		public DateTime ReleaseDate { get; set; }
 		[Display(Name = "Biography of Album")]
 		public string ArtistBio { get; set; }
+
+		public ICollection<MusicGenre> MusicGenre { get; set; }
 	}
 }
