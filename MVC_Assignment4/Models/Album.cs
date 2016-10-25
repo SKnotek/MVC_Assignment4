@@ -9,6 +9,7 @@ namespace MVC_Assignment4.Models
 	public class Album
 	{
 		public int Id { get; set; }
+		[Required]
 		public string Artist { get; set; }
 		[Display(Name = "Album's Title")]
 		public string Title { get; set; }

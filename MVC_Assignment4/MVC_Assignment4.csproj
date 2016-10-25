@@ -221,6 +221,14 @@
     <Compile Include="Migrations\201610240701404_AddedTheSecondTable.Designer.cs">
       <DependentUpon>201610240701404_AddedTheSecondTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610242324243_TestData.cs" />
+    <Compile Include="Migrations\201610242324243_TestData.Designer.cs">
+      <DependentUpon>201610242324243_TestData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610250057568_FinalizedAllAttributesOnDatabase.cs" />
+    <Compile Include="Migrations\201610250057568_FinalizedAllAttributesOnDatabase.Designer.cs">
+      <DependentUpon>201610250057568_FinalizedAllAttributesOnDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Album.cs" />
@@ -322,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610240701404_AddedTheSecondTable.resx">
       <DependentUpon>201610240701404_AddedTheSecondTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610242324243_TestData.resx">
+      <DependentUpon>201610242324243_TestData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610250057568_FinalizedAllAttributesOnDatabase.resx">
+      <DependentUpon>201610250057568_FinalizedAllAttributesOnDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

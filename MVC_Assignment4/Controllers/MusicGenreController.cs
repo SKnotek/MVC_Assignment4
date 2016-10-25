@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using MVC_Assignment4.DAL;
 using MVC_Assignment4.Models;
+using MVC_Assignment4.ViewModels;
 
 namespace MVC_Assignment4.Controllers
 {
@@ -43,12 +44,18 @@ namespace MVC_Assignment4.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MusicGenre musicGenre = db.MusicGenre.Find(id);
-            if (musicGenre == null)
+			//MusicGenre musicGenre = db.MusicGenre.Find(id);
+			var musicGenre = db.MusicGenre.Find(id).Album.Id;
+			var artistGenre = new ArtistGenre()
+			{
+				Artist = db.Album.Where(a => a.Id == musicGenre).Select(a => a.Artist).Single(),
+				Genre = db.MusicGenre.Where(g => g.Album.Id == musicGenre).ToList()
+			};
+            if (musicGenre < 1)
             {
                 return HttpNotFound();
             }
-            return View(musicGenre);
+            return View(artistGenre);
         }
 
         // GET: MusicGenre/Create
